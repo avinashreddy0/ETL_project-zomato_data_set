@@ -13,7 +13,6 @@ try:
     host = 'localhost'
     database = 'zomato_db'
 
-   
     engine = create_engine(f'mysql+pymysql://{user}:{password}@{host}/{database}')
 
     df.to_sql('zomato_clean_data_set', con=engine, if_exists='replace', index=False)
